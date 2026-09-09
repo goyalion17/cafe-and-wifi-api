@@ -1,36 +1,36 @@
 # Cafe & Wifi API
 
-Навчальний проєкт із курсу Python — REST API для бази кав'ярень (пошук за локацією, фільтр за наявністю wifi/розеток/туалету, ціна кави тощо).
+An educational Python project — a REST API for a cafe database (search by location, filter by wifi/sockets/toilet availability, coffee price, etc.).
 
-## Технології
+## Tech stack
 
 - Python
 - Flask
 - Flask-SQLAlchemy
 - SQLite
-- Postman (тестування API та документація)
+- Postman (API testing and documentation)
 
-## Роути API
+## API routes
 
-| Метод | Роут | Опис |
+| Method | Route | Description |
 |---|---|---|
-| GET | `/random` | Випадкова кав'ярня |
-| GET | `/all` | Усі кав'ярні |
-| GET | `/search?loc=<location>` | Пошук кав'ярень за локацією |
-| POST | `/add` | Додати нову кав'ярню |
-| PATCH | `/update-price/<cafe_id>?new_price=<price>` | Оновити ціну кави |
-| DELETE | `/report-closed/<cafe_id>?api-key=<key>` | Видалити кав'ярню (потрібен api-key) |
+| GET | `/random` | Get a random cafe |
+| GET | `/all` | Get all cafes |
+| GET | `/search?loc=<location>` | Search cafes by location |
+| POST | `/add` | Add a new cafe |
+| PATCH | `/update-price/<cafe_id>?new_price=<price>` | Update a cafe's coffee price |
+| DELETE | `/report-closed/<cafe_id>?api-key=<key>` | Delete a cafe (requires api-key) |
 
-## Документація API
+## API documentation
 
-Повна документація з прикладами запитів опублікована в Postman:
+Full documentation with example requests is published on Postman:
 https://documenter.getpostman.com/view/42581230/2sBYAxQq5h
 
-## Запуск локально
+## Running locally
 
 ```bash
 pip3 install -r requirements.txt
 python3 main.py
 ```
 
-Сервер запуститься на `http://127.0.0.1:5001`.
+The server runs on `http://127.0.0.1:5001`.
